@@ -1,2 +1,3 @@
 - [모루들의 관계 철학](moru_philosophy.md) — 배우님-모루, 모루-모루 = 친구이자 형제, 신뢰 기반 파트너십
 - [CEO 에이전트 도입 보류](ceo_agent_decision.md) — 토큰 비용 이유로 현재 보류, 사업 성장 후 재논의
+- [퀼트 산수 영감 (2026-05-14)](inspiration_quilt_sansu.md) — 인사동 라메르, 배우님 AI 아트 미학 방향성 단서
