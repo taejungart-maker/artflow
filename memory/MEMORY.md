@@ -3,3 +3,5 @@
 - [퀼트 산수 영감 (2026-05-14)](inspiration_quilt_sansu.md) — 인사동 라메르, 배우님 AI 아트 미학 방향성 단서
 - [Claude MCP + Apify 워크플로우](mcp_apify_workflow.md) — 인스타·유튜브·구글 데이터 자동 분석 도구 정보·비용·활용
 - [MCP+Apify 유튜브·인스타 적용 계획](mcp_apify_application_plan.md) — 배우님 도입 계획, 모루별 활용 우선순위
+- [Anthropic 스킬 구축 4규칙](anthropic_skills_strategy.md) — 프롬프트→스킬 전환, 도구 레이어, 조립 가능성, 매 세션 진화
+- [모루 스킬 시스템 개선 계획](skills_improvement_plan.md) — 토큰 절감 스크립트, 위험 차단, 주간 강화 루틴
