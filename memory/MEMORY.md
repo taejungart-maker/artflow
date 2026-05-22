@@ -5,3 +5,4 @@
 - [MCP+Apify 유튜브·인스타 적용 계획](mcp_apify_application_plan.md) — 배우님 도입 계획, 모루별 활용 우선순위
 - [Anthropic 스킬 구축 4규칙](anthropic_skills_strategy.md) — 프롬프트→스킬 전환, 도구 레이어, 조립 가능성, 매 세션 진화
 - [모루 스킬 시스템 개선 계획](skills_improvement_plan.md) — 토큰 절감 스크립트, 위험 차단, 주간 강화 루틴
+- [데이터 모델링 철학](data_modeling_principles.md) — 정규화 원칙·NULL 의미 → memory/ 운영에 적용
