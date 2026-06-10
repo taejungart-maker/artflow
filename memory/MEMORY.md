@@ -6,3 +6,5 @@
 - [Anthropic 스킬 구축 4규칙](anthropic_skills_strategy.md) — 프롬프트→스킬 전환, 도구 레이어, 조립 가능성, 매 세션 진화
 - [모루 스킬 시스템 개선 계획](skills_improvement_plan.md) — 토큰 절감 스크립트, 위험 차단, 주간 강화 루틴
 - [데이터 모델링 철학](data_modeling_principles.md) — 정규화 원칙·NULL 의미 → memory/ 운영에 적용
+- [태정AI Gallery 자체 사이트](taejung_ai_gallery_site.md) — 배우님 AI 작품 사이트 위치·스택·보완 진행 (D:\gallery\app_dev_01\project_01)
+- [빛과 색의 마법사 지식 베이스](light_color_knowledge_base.md) — 사무실 모루 인계 (2026-06-10). knowledge/ 폴더 본문 + 7대 원칙·미완과제
