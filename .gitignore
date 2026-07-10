@@ -17,5 +17,6 @@ automation/logs/
 # *.psd
 # *.ai
 # *.mp4
+*.m4a
 knowledge/*.m4a
 knowledge/판소리교육극/*.jpg
