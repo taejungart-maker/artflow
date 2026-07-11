@@ -19,4 +19,7 @@ automation/logs/
 # *.mp4
 *.m4a
 knowledge/*.m4a
+
+# 사적 대화 녹취 원문 — 로컬 전용 (실명·개인사 포함, 원격 업로드 금지)
+knowledge/녹취_병천형님*.md
 knowledge/판소리교육극/*.jpg
