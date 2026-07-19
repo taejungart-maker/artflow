@@ -1,0 +1,265 @@
+<title>거장의 빛과 색 ① 렘브란트 — 카드뉴스 시안</title>
+<style>
+  :root {
+    --bg: #faf8f4;
+    --text: #26211a;
+    --muted: #8a8071;
+    --line: #e2dcce;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14110d; --text: #e8e2d4; --muted: #8f8674; --line: #2e2920; }
+  }
+  :root[data-theme="dark"] { --bg: #14110d; --text: #e8e2d4; --muted: #8f8674; --line: #2e2920; }
+  :root[data-theme="light"] { --bg: #faf8f4; --text: #26211a; --muted: #8a8071; --line: #e2dcce; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Nanum Myeongjo", "Noto Serif KR", Batang, "Apple SD Gothic Neo", serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 580px; margin: 0 auto; padding: 48px 20px 80px; display: flex; flex-direction: column; }
+  header.page { margin-bottom: 10px; }
+  .eyebrow { font-family: "Malgun Gothic", sans-serif; font-size: 11px; letter-spacing: 0.22em; color: var(--muted); }
+  header.page h1 { font-size: 26px; font-weight: 700; margin: 8px 0 6px; text-wrap: balance; }
+  header.page p { color: var(--muted); font-size: 14px; margin: 0; }
+  .cardlabel { font-family: "Malgun Gothic", sans-serif; font-size: 11px; letter-spacing: 0.18em; color: var(--muted); margin: 34px 2px 10px; }
+
+  /* ================= 카드 공통: 키아로스쿠로 ================= */
+  .card {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    container-type: inline-size;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  }
+  .face {
+    position: absolute; inset: 0; padding: 8.5cqi;
+    display: flex; flex-direction: column;
+    color: #ece1c8;
+    background:
+      radial-gradient(75% 60% at 30% 26%, rgba(122,86,32,0.55), rgba(0,0,0,0) 62%),
+      radial-gradient(130% 130% at 50% 55%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%),
+      linear-gradient(165deg, #211708 0%, #150e06 55%, #0c0804 100%);
+  }
+  .grain {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='240' height='240' filter='url(%23n)' opacity='0.9'/></svg>");
+    background-size: 34cqi 34cqi;
+    opacity: 0.14; mix-blend-mode: overlay;
+  }
+
+  .series {
+    position: absolute; top: 8.5cqi; right: 8.5cqi;
+    writing-mode: vertical-rl;
+    font-family: "Malgun Gothic", sans-serif;
+    font-size: 2.2cqi; letter-spacing: 0.5em; opacity: 0.5;
+  }
+  .k-eyebrow { font-family: "Malgun Gothic", sans-serif; font-size: 2.3cqi; letter-spacing: 0.4em; opacity: 0.6; }
+  .gold { color: #dcae52; }
+
+  .cv { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 2.4cqi; position: relative; }
+  .big { font-size: 7cqi; font-weight: 700; line-height: 1.65; text-wrap: balance; text-shadow: 0 0 4cqi rgba(0,0,0,0.6); }
+  .med { font-size: 4.4cqi; line-height: 1.9; opacity: 0.92; text-wrap: balance; }
+  .small { font-family: "Malgun Gothic", sans-serif; font-size: 2.5cqi; line-height: 1.7; opacity: 0.6; }
+  .src { font-family: "Malgun Gothic", sans-serif; font-size: 2.1cqi; opacity: 0.45; margin-top: auto; padding-top: 2cqi; }
+
+  /* 표지 */
+  .cover-name { font-size: 16cqi; font-weight: 800; letter-spacing: 0.4cqi; line-height: 1.15; text-shadow: 0 0 6cqi rgba(0,0,0,0.7); }
+  .cover-years { font-family: "Malgun Gothic", sans-serif; font-size: 2.6cqi; letter-spacing: 0.3em; opacity: 0.55; margin-top: 1cqi; }
+  .cover-thesis { font-size: 5.2cqi; font-weight: 700; line-height: 1.75; margin-top: 6cqi; }
+
+  /* 임파스토 스트로크 */
+  .stroke {
+    height: 15cqi; width: 74cqi; margin: 3cqi 0;
+    border-radius: 8cqi / 50%;
+    background: linear-gradient(180deg, #f6dc95 0%, #dcae52 42%, #8a651f 88%);
+    box-shadow:
+      inset 0 2cqi 2.4cqi rgba(255,242,205,0.55),
+      inset 0 -2.6cqi 3cqi rgba(56,37,6,0.6),
+      0 1.8cqi 3.6cqi rgba(0,0,0,0.55);
+    filter: url(#rough);
+    transform: rotate(-2.5deg);
+  }
+
+  /* 단면도 */
+  .xsec { margin: 3cqi 0 1cqi; position: relative; height: 22cqi; }
+  .xsec .base { position: absolute; left: 0; right: 0; bottom: 6cqi; height: 0.5cqi; background: rgba(236,225,200,0.55); }
+  .xsec .thick {
+    position: absolute; left: 6cqi; bottom: 6.5cqi; width: 26cqi; height: 9cqi;
+    border-radius: 13cqi 13cqi 0 0 / 9cqi 9cqi 0 0;
+    background: linear-gradient(100deg, #f6dc95 8%, #dcae52 55%, #7c5a1b);
+    box-shadow: inset 0.8cqi 1cqi 1.6cqi rgba(255,242,205,0.6), inset -1cqi -1cqi 2cqi rgba(50,33,5,0.5);
+    filter: url(#rough);
+  }
+  .xsec .thin { position: absolute; right: 8cqi; bottom: 6.4cqi; width: 24cqi; height: 0.9cqi; border-radius: 0.5cqi; background: linear-gradient(180deg, #4a3a25, #2a2013); }
+  .xsec .lb { position: absolute; bottom: 0; font-family: "Malgun Gothic", sans-serif; font-size: 2.4cqi; opacity: 0.7; }
+  .xsec .lb.l { left: 10cqi; }
+  .xsec .lb.r { right: 9cqi; }
+
+  /* 속설 카드 */
+  .myth { font-size: 13cqi; font-weight: 800; position: relative; display: inline-block; line-height: 1.2; }
+  .myth::after {
+    content: ""; position: absolute; left: -3cqi; right: -3cqi; top: 52%;
+    border-top: 1cqi solid rgba(172,52,36,0.85);
+    transform: rotate(-7deg);
+    filter: url(#rough);
+  }
+
+  /* 그때/오늘 비교 */
+  .compare { display: flex; gap: 4cqi; margin: 3cqi 0 1cqi; }
+  .compare .sw { flex: 1; }
+  .compare .chip { height: 20cqi; border-radius: 1cqi; box-shadow: inset 0 0 3cqi rgba(0,0,0,0.35); }
+  .compare .sw.then .chip { background: radial-gradient(80% 80% at 35% 30%, #f2d488, #c99a3e 55%, #6d4c12); }
+  .compare .sw.now .chip { background: radial-gradient(80% 80% at 35% 30%, #9a7c4a, #6e5730 55%, #3c2f18); }
+  .compare .lb { font-family: "Malgun Gothic", sans-serif; font-size: 2.5cqi; opacity: 0.7; margin-top: 1.4cqi; text-align: center; }
+
+  /* 클로징 */
+  .next-slot {
+    width: 24cqi; height: 30cqi; margin-bottom: 4cqi;
+    border: 0.3cqi solid rgba(236,225,200,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9cqi; opacity: 0.55;
+    background: radial-gradient(70% 60% at 50% 40%, rgba(122,86,32,0.25), rgba(0,0,0,0) 70%);
+  }
+  .credit { font-family: "Malgun Gothic", sans-serif; font-size: 2.7cqi; opacity: 0.55; letter-spacing: 0.16em; }
+
+  footer.note { margin-top: 46px; border-top: 1px solid var(--line); padding-top: 18px; font-size: 13px; color: var(--muted); }
+  footer.note ul { margin: 8px 0 0; padding-left: 18px; }
+  footer.note li { margin: 4px 0; }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="rough">
+    <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5"/>
+  </filter>
+</svg>
+
+<div class="wrap">
+  <header class="page">
+    <div class="eyebrow">artflow · 교양 트랙 1화 시안</div>
+    <h1>거장의 빛과 색 ① — 렘브란트</h1>
+    <p>정방형 7장 · 1080×1080 비율 · 근거: 빛과색 지식 베이스 (야경꾼 기술 분석, 2025)</p>
+  </header>
+
+  <div class="cardlabel">01 · 표지</div>
+  <div class="card">
+    <div class="face">
+      <div class="k-eyebrow gold">거장의 빛과 색 · 첫 번째</div>
+      <div class="cv">
+        <div>
+          <div class="cover-name">렘브란트</div>
+          <div class="cover-years">REMBRANDT · 1606 – 1669</div>
+        </div>
+        <div class="cover-thesis">그의 빛은 그린 것이 아니라,<br><span class="gold">쌓은 것</span>입니다.</div>
+      </div>
+    </div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="cardlabel">02 · 야경꾼의 비밀 — 빛은 두껍다</div>
+  <div class="card">
+    <div class="face">
+      <div class="series">거장의 빛과 색 · 一</div>
+      <div class="k-eyebrow">빛의 언덕</div>
+      <div class="cv">
+        <div class="med">《야경꾼》을 기계로 분석했더니 —<br>밝은 곳일수록, 물감이 두꺼웠습니다.</div>
+        <div class="stroke"></div>
+        <div class="big">하이라이트는 붓으로 쌓은 언덕.<br>진짜 빛이 거기 부딪혀 반사됩니다.</div>
+      </div>
+      <div class="src">근거: 《야경꾼》 안료·붓질 기술 분석 논문 (2025)</div>
+    </div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="cardlabel">03 · 어둠은 얇다 — 단면도</div>
+  <div class="card">
+    <div class="face">
+      <div class="series">거장의 빛과 색 · 一</div>
+      <div class="k-eyebrow">물감의 높낮이</div>
+      <div class="cv">
+        <div class="big">어둠은 반대로, 얇고 매끈하게.</div>
+        <div class="xsec">
+          <div class="base"></div>
+          <div class="thick"></div>
+          <div class="thin"></div>
+          <div class="lb l">빛 = 두껍게</div>
+          <div class="lb r">어둠 = 얇게</div>
+        </div>
+        <div class="med">한 화면 안에서 물감의 <span class="gold">높낮이</span>가<br>명암을 만듭니다. 그림이 지형인 셈이죠.</div>
+      </div>
+    </div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="cardlabel">04 · 바탕 — 어둠에서 빛을 끌어올린다</div>
+  <div class="card">
+    <div class="face">
+      <div class="series">거장의 빛과 색 · 一</div>
+      <div class="k-eyebrow">시작의 색</div>
+      <div class="cv">
+        <div class="med">렘브란트는 흰 캔버스에서 시작하지 않았습니다.</div>
+        <div class="big">먼저 화면 전체를<br><span class="gold">따뜻한 회색</span>으로 덮고,<br>거기서 빛을 끌어올립니다.</div>
+        <div class="med">어둠이 먼저, 빛은 나중 —<br>순서가 그의 분위기를 만들었습니다.</div>
+      </div>
+    </div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="cardlabel">05 · 속설 교정 — "6색만 썼다?"</div>
+  <div class="card">
+    <div class="face">
+      <div class="series">거장의 빛과 색 · 一</div>
+      <div class="k-eyebrow">속설과 사실</div>
+      <div class="cv">
+        <div class="med">"렘브란트는 물감 여섯 개로 그렸다"<br>— 널리 퍼진 이야기지만,</div>
+        <div><span class="myth">6色</span></div>
+        <div class="med">분석 결과 안료는 훨씬 많았습니다.<br>진짜 비밀은 색의 <span class="gold">개수</span>가 아니라 —<br>빛의 영역과 어둠의 영역에<br><span class="gold">다른 안료</span>를 쓴 것.</div>
+      </div>
+      <div class="src">연백·납주석황·버밀리온·레드레이크·스몰트·아주라이트 외 다수 검출</div>
+    </div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="cardlabel">06 · 지금 보는 야경꾼은 늙었다</div>
+  <div class="card">
+    <div class="face">
+      <div class="series">거장의 빛과 색 · 一</div>
+      <div class="k-eyebrow">그림도 나이를 먹는다</div>
+      <div class="cv">
+        <div class="big">"렘브란트 = 갈색"은<br>절반쯤, <span class="gold">노화의 색</span>입니다.</div>
+        <div class="compare">
+          <div class="sw then"><div class="chip"></div><div class="lb">1642년의 광휘 (추정)</div></div>
+          <div class="sw now"><div class="chip"></div><div class="lb">오늘의 야경꾼</div></div>
+        </div>
+        <div class="med">안료가 세월에 변질되며<br>원래의 빛 대비가 가라앉았습니다.</div>
+      </div>
+    </div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="cardlabel">07 · 클로징 — 다음 거장</div>
+  <div class="card">
+    <div class="face">
+      <div class="k-eyebrow gold">거장의 빛과 색</div>
+      <div class="cv">
+        <div class="next-slot">?</div>
+        <div class="big">매주,<br>한 거장의 빛을 켭니다.</div>
+        <div class="credit">거장의 빛과 색 ① 렘브란트 · 글 태정</div>
+      </div>
+    </div>
+    <div class="grain"></div>
+  </div>
+
+  <footer class="note">
+    <div class="eyebrow">시안 메모</div>
+    <ul>
+      <li>시리즈 포맷 고정: 표지(이름+한 문장 논지) → 본문 4~5장 → 속설 교정 1장 → 클로징(다음 예고)</li>
+      <li>내용 근거: knowledge/거장_빛과색_스타일.md (✅ 검증 항목만 사용, 명화 이미지는 쓰지 않고 도해로)</li>
+      <li>후보 큐: ② 소른(4색 팔레트의 진실) ③ 벨라스케스(빛이 주인공을 정한다) ④ 모네 ⑤ 페르메이르 …</li>
+      <li>《감정》 관련 내용 없음 — 노출 위험 0, 미술 감성 팔로워 축적용</li>
+    </ul>
+  </footer>
+</div>
