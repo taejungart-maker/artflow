@@ -61,22 +61,22 @@ body = '\n'.join(out)
 assert not [x for x in out if "**" in x or "```" in x]
 CSS = """
 @page { size: A4; margin: 25mm 22mm 25mm 25mm;
-  @bottom-center { content: counter(page); font-family: 'Batang', serif; font-size: 9.5pt; } }
-body { font-family: 'Batang', 'Noto Serif KR', serif; font-size: 11pt; line-height: 1.75; color: #111; word-break: keep-all; }
-h1 { font-size: 30pt; text-align: center; margin: 70mm 0 4mm; font-weight: bold; letter-spacing: 0.1em; }
+  @bottom-center { content: counter(page); font-family: 'HCR Batang', serif; font-size: 10pt; font-weight: 700; color: #000; } }
+body { font-family: 'HCR Batang', 'Batang', serif; font-size: 12pt; font-weight: 700; line-height: 1.75; color: #000; word-break: keep-all; }
+h1 { font-size: 30pt; text-align: center; margin: 70mm 0 4mm; font-weight: 700; letter-spacing: 0.1em; }
 .sub { text-align: center; font-size: 13pt; margin: 0 0 30mm; }
 .credit { text-align: center; font-size: 11.5pt; margin-bottom: 0; page-break-after: always; }
-h3 { font-size: 12.5pt; font-weight: bold; margin: 9mm 0 3mm; }
+h3 { font-size: 12.5pt; font-weight: 700; margin: 9mm 0 3mm; }
 h3:first-of-type { margin-top: 0; }
 .cast { margin: 0 0 1.5mm; padding-left: 8em; text-indent: -8em; }
-.cast .cn { display: inline-block; width: 8em; text-indent: 0; font-weight: bold; }
+.cast .cn { display: inline-block; width: 8em; text-indent: 0; font-weight: 700; }
 .front { margin: 0 0 2mm; }
-.note { margin-top: 12mm; font-size: 9.5pt; color: #444; page-break-after: always; }
-h2 { font-size: 15pt; font-weight: bold; text-align: center; margin: 0 0 10mm; page-break-before: always; }
+.note { margin-top: 12mm; font-size: 9.5pt; color: #000; page-break-after: always; }
+h2 { font-size: 15pt; font-weight: 700; text-align: center; margin: 0 0 10mm; page-break-before: always; }
 h2:first-of-type { page-break-before: auto; }
 .dia { margin: 0 0 3.2mm; padding-left: 4.6em; text-indent: -4.6em; page-break-inside: avoid; }
-.spk { display: inline-block; min-width: 4em; margin-right: 0.6em; text-indent: 0; font-weight: bold; }
-.sd { margin: 1mm 0 4mm 4.6em; font-size: 10pt; color: #333; page-break-inside: avoid; }
+.spk { display: inline-block; min-width: 4em; margin-right: 0.6em; text-indent: 0; font-weight: 700; }
+.sd { margin: 1mm 0 4mm 4.6em; font-size: 11pt; font-weight: 700; color: #000; page-break-inside: avoid; }
 .brk { text-align: center; margin: 5mm 0; }
 .end { text-align: center; margin: 12mm 0 0; }
 """
